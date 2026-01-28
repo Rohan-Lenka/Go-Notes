@@ -1,0 +1,5 @@
+1) go build main.go 
+2) go run main.go
+- builds and simultaneously runs the program, no exe file is created 
+3) go build (at root folder)
+- builds and makes a exe file 
