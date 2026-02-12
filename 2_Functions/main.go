@@ -28,5 +28,15 @@ func main() {
 		fmt.Println("Error:", err.Error())  // print the error message like this using Error()
 		return
 	}
-	fmt.Printf("Quotient: %d, Remainder: %d\n ", q, r)
+	fmt.Printf("Quotient: %d, Remainder: %d\n", q, r)
+
+	// functions inside functions & anonymous functions 
+	func () {
+		fmt.Println("Anonymous function")
+	}() // declaration + execution is compulsory for anonymous functions
+
+	sum := func (a int, b int) int {  // the anonymous function is assigned to var sum
+		return a + b
+	}
+	fmt.Println(sum(1, 9))
 }

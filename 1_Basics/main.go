@@ -37,7 +37,9 @@ func main() {
 	/* 
 		2) DATA TYPES 
 
-		i) int8, int16, int32, int64, int (by defaut it is int32)
+		i) int8, int16, int32, int64, int (by defaut it is -> Depends on platform:
+			32 bits in 32 bit systems and
+			64 bit in 64 bit systems)
 		ii) uint8, uint16, uint32, uint64
 		iii) float32, float64 (for more precision)
 		iv) bool

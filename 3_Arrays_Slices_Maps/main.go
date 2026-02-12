@@ -34,8 +34,27 @@ func main() {
 
 	/*
 		2) SLICES
+		 - a dynamic data structure that is built on top of an array
 		 - dynamic size
 		 - same type
+		 
+		VIMP -> When you define a slice variable in Go, such as var mySlice []int, 
+		Go creates a data structure (internally Go slice is basically a struct often called slice header)
+		that contains three pieces of information:
+
+		i) A pointer to an underlying array that holds the slice elements
+		ii) A length that represents the number of elements in the slice
+		iii) A capacity that represents the maximum number of elements that the underlying array can hold
+
+		Eg -> 
+		mySlice := []int{2, 3,4}
+
+		go creates this under the hood_ 
+
+		+---------+---+
+		| 2| 3| 4|
+		+---------+--- +
+		len=3, cap=4
 	*/
 
 	// initialization is kind of same as arrays
@@ -47,6 +66,11 @@ func main() {
 
 	// append elements to slice
 	intSlice = append(intSlice, 4)
+	// VIMP -> The append built-in function appends elements to the end of a slice. 
+	// If it has sufficient capacity, the destination is resliced to accommodate the new elements. 
+	// If it does not, a new underlying array will be allocated. Append returns the updated slice.
+	// TC is amortized O(1)
+
 	// emptySlice := []string{} 
 	
 	// functions ->
